@@ -76,7 +76,7 @@ export class Popup {
           let documentOrigin = document.location.host;
           let popupWindowOrigin = self.popupWindow.location.host;
 
-          if (popupWindowOrigin === documentOrigin && (self.popupWindow.location.search || self.popupWindow.location.hash)) {
+          if ((self.popupWindow.location.search || self.popupWindow.location.hash)) {
             let queryParams = self.popupWindow.location.search.substring(1).replace(/\/$/, '');
             let hashParams = self.popupWindow.location.hash.substring(1).replace(/[\/$]/, '');
             let hash = parseQueryString(hashParams);
