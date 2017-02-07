@@ -92,7 +92,7 @@ var Popup = exports.Popup = (_dec = (0, _aureliaDependencyInjection.inject)(_bas
           var documentOrigin = document.location.host;
           var popupWindowOrigin = self.popupWindow.location.host;
 
-          if (popupWindowOrigin === documentOrigin && (self.popupWindow.location.search || self.popupWindow.location.hash)) {
+          if ((self.popupWindow.location.search || self.popupWindow.location.hash)) {
             var queryParams = self.popupWindow.location.search.substring(1).replace(/\/$/, '');
             var hashParams = self.popupWindow.location.hash.substring(1).replace(/[\/$]/, '');
             var hash = (0, _authUtilities.parseQueryString)(hashParams);
